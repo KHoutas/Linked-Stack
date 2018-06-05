@@ -27,7 +27,7 @@ typename Stack<ItemType>::Node* Stack<ItemType>::Node::getNext()
 template <class ItemType>
 Stack<ItemType>::Stack()
 {
-	base = nullptr;	// Sets base data type to nullptr, because when initializing the stack at first there ARE no nodes/items.
+	base = nullptr;		// Sets base data type to nullptr, because when initializing the stack at first there ARE no nodes/items.
 	size = 0;		// Sets the size to 0 because there are no nodes/items.
 }
 
@@ -43,7 +43,7 @@ void Stack<ItemType>::push(ItemType item)
 template <class ItemType>
 ItemType Stack<ItemType>::pop()
 {
-	ItemType value = ItemType();	// Create a variable value to store the value of the item we are popping off. In this case, we set it to the default of whatever item type we use.
+	ItemType value = ItemType();		// Create a variable value to store the value of the item we are popping off. In this case, we set it to the default of whatever item type we use.
 
 	if (base != nullptr)			// If there is nothing in the stack, do NOT do this
 	{
@@ -53,12 +53,12 @@ ItemType Stack<ItemType>::pop()
 
 		base = base->getNext();		// Set base to point to the location of the next node in the stack.
 
-		delete deleter;				// Delete the node at the current location deleter is pointing to
+		delete deleter;			// Delete the node at the current location deleter is pointing to
 
-		size--;						// Decrement size by one
+		size--;				// Decrement size by one
 	}
 
-	return value;					// Return the value stored in value
+	return value;				// Return the value stored in value
 }
 
 // Function to check the first value at the top of the stack
@@ -79,10 +79,10 @@ int Stack<ItemType>::getSize()
 template <class ItemType>
 bool Stack<ItemType>::isEmpty()
 {
-	if (size == 0)	// If the size is equal to 0
+	if (size == 0)		// If the size is equal to 0
 	{
 		return true;	// Return true, the stack is empty
 	}
 	
-	return false;	// If it's not, return false
+	return false;		// If it's not, return false
 }
