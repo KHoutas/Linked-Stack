@@ -3,3 +3,7 @@ Abstract Data Type: Linked implementation of a Stack, which allows for the pushi
 
 ## Various Functionality
 ### Push Function
+Allows a user to push a value onto the stack.
+  Usage: objectName.push(item);
+
+### Pop Function
